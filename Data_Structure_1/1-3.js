@@ -18,4 +18,3 @@ for (let i = 0; i < arr.length; i++) {
     count = 0;
 }
 console.log(finel);
-console.log(arr);
