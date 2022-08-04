@@ -1,5 +1,7 @@
-// important note
-// fill this -> caseSensitive
+//sort
+//converte to 2D
+
+
 function parseText(text,caseSensitive,punc){
     let arr; //this array we start them
     let finel = []; // we concat every new element to this array
@@ -35,8 +37,7 @@ function parseText(text,caseSensitive,punc){
         {
             //temp -> to create temp['word',count] of array
             let temp = [];
-            temp = temp.concat(arr[i]);
-            temp = temp.concat(how_many_time_is_apper);
+            temp = temp.concat(arr[i],how_many_time_is_apper);
 
             //هذا السطر فقط لعملية الفحس
             // يمكن مسحه وتفعيل السطر االذي يليه بعد الإنتهاء من البرنامج
@@ -46,7 +47,7 @@ function parseText(text,caseSensitive,punc){
             // [['word1',count],['word2',count],['word3',count]]
             //finel.push(temp); //enable, that converte to 2D
         }
-        how_many_time_is_apper = 0; //
+        how_many_time_is_apper = 0; 
     }
 
     //This function only works if the user requests
@@ -79,15 +80,6 @@ function parseText(text,caseSensitive,punc){
     }
 
     return finel; //return the finel Array -> (result)
-}
-
-function print2D(array){
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            console.log(array[i,j]);
-        }
-        
-    }
 }
 
 
