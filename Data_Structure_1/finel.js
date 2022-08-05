@@ -1,7 +1,15 @@
-//sort
 //converte to 2D
+///////////////////////////////////////////
 
+//sort
+function sort2D(arr){
+    arr.sort(function (a, b) {
+        return a[1].localeCompare(b[1]);
+    });    
+    return arr
+}
 
+// the main function
 function parseText(text,caseSensitive,punc){
     let arr; //this array we start them
     let finel = []; // we concat every new element to this array
@@ -90,4 +98,3 @@ console.log('caseSenstive  ,  :',parseText(text,true,true));
 console.log('caseSenstive     :',parseText(text,true,false));
 console.log('              ,  :',parseText(text,false,true));
 console.log('                 :',parseText(text,false,false));
-
