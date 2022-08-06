@@ -1,5 +1,6 @@
 //converte to 2D
-///////////////////////////////////////////
+
+
 
 //sort
 function sort2D(arr){
@@ -93,7 +94,7 @@ function parseText(text,caseSensitive,punc){
 
 //Test our appliction
 let text = "He saw her walking, so he asked her."
-console.log(text.split(' ')); //this for show orginal Array
+console.log('  orginal Array  :',text.split(' ')); //this for show orginal Array
 console.log('caseSenstive  ,  :',parseText(text,true,true));
 console.log('caseSenstive     :',parseText(text,true,false));
 console.log('              ,  :',parseText(text,false,true));
