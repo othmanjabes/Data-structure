@@ -29,25 +29,19 @@ function parseText(text,caseSensitive,punc){
     //2. added the count & element -> to the finel Array
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
-            if(caseSensitive){
-                if(arr[i].toUpperCase() === arr[j].toUpperCase()){
-                    how_many_time_is_apper++;
+                if(arr[i].toUpperCase() === arr[j].toUpperCase() && caseSensitive){
+                        how_many_time_is_apper++;
                 }
-            }else{
-                if(arr[i] === arr[j]){
-                    how_many_time_is_apper++;
-                }
+                else if(arr[i] === arr[j])
+                {
+                        how_many_time_is_apper++;
+                    }
             }
-        }
 
-        // add the element & count to the new Array
+        // add the element & count to the finel Array
         if(!finel.includes(arr[i]) && arr[i] !== '')
         {
-            //temp -> to create temp['word',count] of array
-            let temp = [];
-            temp = temp.concat(arr[i],how_many_time_is_apper);
-
-            finel = finel.concat(temp);
+            finel = finel.concat(arr[i],how_many_time_is_apper);
         }
         how_many_time_is_apper = 0; 
     }
@@ -111,7 +105,7 @@ let result4 = parseText(text,false,false);
 
 
 //Test our appliction
-// console.log('caseSenstive  ,  :',parseText(text,true,true));
-// console.log('caseSenstive     :',parseText(text,true,false));
-// console.log('              ,  :',parseText(text,false,true));
-// console.log('                 :',parseText(text,false,false));
+console.log('caseSenstive  ,  :',parseText(text,true,true));
+console.log('caseSenstive     :',parseText(text,true,false));
+console.log('              ,  :',parseText(text,false,true));
+console.log('                 :',parseText(text,false,false));
