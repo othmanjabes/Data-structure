@@ -19,24 +19,24 @@ function parseText(text,caseSensitive,punc){
 
     //1. count the number of times the word appears
     //2. added the count & element -> to the finel Array
-    let lastIndexOfLastWord;
+    let t;
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
                 if(arr[i].toUpperCase() === arr[j].toUpperCase() && caseSensitive){
                         how_many_time_is_apper++;
-                        lastIndexOfLastWord = j;
+                        t = j;
                 }
                 else if(arr[i] === arr[j])
                 {
                         how_many_time_is_apper++;
-                        lastIndexOfLastWord = j;
+                        t = j;
                 }
             }
 
         // add the element & count to the finel Array
         if(!finel.includes(arr[i]) && arr[i] !== '')
         {
-            finel = finel.concat(arr[lastIndexOfLastWord],how_many_time_is_apper);
+            finel = finel.concat(arr[t],how_many_time_is_apper);
         }
         how_many_time_is_apper = 0; 
     }
