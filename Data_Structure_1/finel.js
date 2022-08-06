@@ -13,7 +13,6 @@ punc: true:          'her,' ≠ 'her | false: 'her,' == 'her'
 function parseText(text,caseSensitive,punc){
     let arr; //this array we start them
     let finel = []; // we concat every new element to this array
-    let arr2D = [];
     let how_many_time_is_apper = 0; //count how many time the word is apper, after this return to zero value.
     
     // for remove the ' ' && '.'
@@ -48,13 +47,7 @@ function parseText(text,caseSensitive,punc){
             let temp = [];
             temp = temp.concat(arr[i],how_many_time_is_apper);
 
-            //هذا السطر فقط لعملية الفحس
-            // يمكن مسحه وتفعيل السطر االذي يليه بعد الإنتهاء من البرنامج
             finel = finel.concat(temp);
-            
-            //add the temp to finel array
-            // [['word1',count],['word2',count],['word3',count]]
-            //finel.push(temp); //enable, that converte to 2D
         }
         how_many_time_is_apper = 0; 
     }
@@ -89,6 +82,7 @@ function parseText(text,caseSensitive,punc){
     }
 
     //converte from 1D to 2D array
+    let arr2D = [];
     for (let i = 0; i < finel.length; i+=2) {
         arr2D.push(Array.of(finel[i],finel[i+1]));
     }
