@@ -51,20 +51,22 @@ function sort2D(arr){
 
 
 
-
-
 //Section of RUN and TEST
-let text = "He saw her walking, so he asked her."
-console.log('  orginal Array  :',text.split(' ')); //this for show orginal Array
+function Test(){
+    let text = "He saw her walking, so he asked her."
+    console.log('  orginal Array  :',text.split(' ')); //this for show orginal Array
+    
+    let result1 = parseText(text,true,true);
+    let result2 = parseText(text,true,false);
+    let result3 = parseText(text,false,true);
+    let result4 = parseText(text,false,false);
+    
+    
+    //Test our appliction
+    console.log('caseSenstive  ,  :',parseText(text,true,true));
+    console.log('caseSenstive     :',parseText(text,true,false));
+    console.log('              ,  :',parseText(text,false,true));
+    console.log('                 :',parseText(text,false,false));
+}
 
-let result1 = parseText(text,true,true);
-let result2 = parseText(text,true,false);
-let result3 = parseText(text,false,true);
-let result4 = parseText(text,false,false);
-
-
-//Test our appliction
-console.log('caseSenstive  ,  :',parseText(text,true,true));
-console.log('caseSenstive     :',parseText(text,true,false));
-console.log('              ,  :',parseText(text,false,true));
-console.log('                 :',parseText(text,false,false));
+Test();
